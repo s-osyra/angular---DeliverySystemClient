@@ -1,0 +1,43 @@
+.container {
+position: relative;
+min-height: 80vh;
+width: 100vw;
+left: 40%;
+top: 10%;
+}
+.all-container {
+    position: relative;
+    display: flex;
+    // flex-direction: column;
+    min-height: 80vh;
+    width: 100vw;
+    left: 40%;
+    top: 10%;
+    }
+
+
+.mat-tab {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-card {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: space-around;
+
+    label {
+        font-weight: bolder;
+    }
+}

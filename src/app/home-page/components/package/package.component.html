@@ -1,0 +1,90 @@
+<div >
+    <mat-tab-group dynamicHeight (selectedTabChange)="clearMap()">
+        <mat-tab label="Find">
+            <div class="container">
+                <div>
+                    <mat-card>
+                        <form #getFormControl="ngForm" (ngSubmit)="onPackageGet(getFormControl)" autocomplete="off">
+                            <label>Package id: </label>
+                            <input type="text" ngModel name="id" autocomplete="off"> 
+                            <button type="submit">Submit</button>
+                    </form>
+                    </mat-card>
+
+                </div>
+                <app-final-object [map] = map></app-final-object>
+            </div>
+        </mat-tab>
+        <mat-tab label="Add new">
+            <div class="container">
+                <div>
+                    <mat-card>
+                        <form #addNewControl="ngForm" (ngSubmit)="onPackageAdd(addNewControl)" autocomplete="off">
+                            <label>Currentl localization: </label>
+                            <input type="text" ngModel name="currentlocalization" autocomplete="off"><br>
+                            <label>Dimensions: </label>
+                            <input type="text" ngModel name="dimensions" autocomplete="off"><br>
+                            <label>Mass: </label>
+                            <input type="text" ngModel name="mass" autocomplete="off"><br>
+                            <label>Ship date: </label>
+                            <input type="text" ngModel name="shipdate" autocomplete="off"><br>
+                            <label>International: </label>
+                            <input type="text" ngModel name="internationalshipping" autocomplete="off"><br> 
+                            <button type="submit">Submit</button>
+                    </form>
+                    </mat-card>
+                </div>
+                <app-final-object [map] = map></app-final-object>
+            </div>
+        </mat-tab>
+        <mat-tab label="Update"> 
+            <div class="container">
+                <div>
+                    <mat-card>
+                        <form #addUpdateControl="ngForm" (ngSubmit)="onPackageUpdate(addUpdateControl)" autocomplete="off">
+                            <label>Id: </label>
+                            <input type="text" ngModel name="id" autocomplete="off"><br>
+                            <label>Currentl localization: </label>
+                            <input type="text" ngModel name="currentlocalization" autocomplete="off"><br>
+                            <label>Dimensions: </label>
+                            <input type="text" ngModel name="dimensions" autocomplete="off"><br>
+                            <label>Mass: </label>
+                            <input type="text" ngModel name="mass" autocomplete="off"><br>
+                            <label>Ship date: </label>
+                            <input type="text" ngModel name="shipdate" autocomplete="off"><br>
+                            <label>International: </label>
+                            <input type="text" ngModel name="internationalshipping" autocomplete="off"><br> 
+                            <button type="submit">Submit</button>
+                    </form>
+                    </mat-card>
+                </div>
+                <app-final-object [map] = map></app-final-object>
+            </div>
+        </mat-tab>
+        <mat-tab label="Delete"> 
+            <div class="container">
+                <div>
+                    <mat-card>
+                        <form #deleteFormControl="ngForm" (ngSubmit)="onPackageDelete(deleteFormControl)" autocomplete="off">
+                            <label>Package id: </label>
+                            <input type="text" ngModel name="id" autocomplete="off"> 
+                            <button type="submit">Submit</button>
+                    </form>
+                    </mat-card>
+
+                </div>
+                <app-final-object [map] = map></app-final-object>
+            </div>
+        </mat-tab>
+        <mat-tab label="Find all">
+            <div class="container">
+                <mat-card>
+                    <button (click)="OnPackReturnAll()">Return all</button>
+                </mat-card>
+                <app-object-list [data]="data"></app-object-list>
+            </div>
+        </mat-tab>
+        <!-- <mat-tab label="Add transport"> Content 3 </mat-tab>
+        <mat-tab label="Remove transport"> Content 3 </mat-tab> -->
+      </mat-tab-group>
+</div>

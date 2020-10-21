@@ -1,0 +1,16 @@
+<mat-accordion>
+    <div *ngFor="let d of data">
+        <mat-expansion-panel hideToggle  >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Package: Id: {{d.id}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of d | keyvalue">
+              <mat-card >
+                <a class="key">{{item.key}}: </a><a class="value">{{item.value}}</a>
+              </mat-card>
+            </div>
+          </mat-expansion-panel>
+    </div>
+  </mat-accordion>
